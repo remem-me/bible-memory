@@ -71,7 +71,7 @@
               "description": "Read today's passages from the reading plan",
               "prompt": "What is today's Bible reading?",
               "tools_triggered": "get_daily_reading",
-              "expected_behavior": "Lists today's passages from the one-year Bible reading plan in English and the World English Bible, the language and translation of the test user's first account, and offers to add a verse that stands out."
+              "expected_behavior": "Lists today's passages from the one-year Bible reading plan in English, the language of the test user's first account, and offers to add a verse that stands out."
             },
             {
               "description": "Find a published collection to memorize",
