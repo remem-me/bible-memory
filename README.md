@@ -1,6 +1,12 @@
 # Remember Me – Bible Memory
 
-The listing package and store materials for Remember Me's connection to AI assistants ([doc#30](https://gitlab.com/remem-me/doc/-/work_items/30)). The connection itself is the MCP server at `https://auth.remem.me/mcp` in [rm_replication](https://gitlab.com/remem-me/server) (`mcp_server/`). This repo holds what the stores need around it.
+Memorize Bible verses with your AI assistant. Remember Me – Bible Memory connects Claude, ChatGPT and other assistants to [Remember Me](https://www.remem.me), the Bible memory app with spaced repetition: add a verse you have just read, get quizzed on the verses that are due, and follow a daily Bible reading plan.
+
+**Connect it:** add `https://auth.remem.me/mcp` as a connector in your assistant and sign in with your Remember Me account. Step by step: [Connect an AI Assistant](https://www.remem.me/docs/mcp/). Questions: the [user forum](https://forum.remem.me/) or support@remem.me.
+
+## What's in this repository
+
+The connection itself is the MCP server at `https://auth.remem.me/mcp` in [rm_replication](https://gitlab.com/remem-me/server) (`mcp_server/`). This repository holds the package and the materials the assistants' stores need around it ([doc#30](https://gitlab.com/remem-me/doc/-/work_items/30)).
 
 | Path | Contents |
 |---|---|
@@ -23,4 +29,4 @@ Keep passwords out of this repo. They go only into the stores' private fields.
 
 ## Later
 
-M4 in doc#30 adds a `bible-verse-memory` skill under `skills/`, a Claude plugin manifest and a GitHub mirror.
+M4 in doc#30 adds a `bible-memory` skill under `skills/` and a Claude plugin manifest, so the skill directories (Claude, skills.sh, ClawHub) can install it from this repository.

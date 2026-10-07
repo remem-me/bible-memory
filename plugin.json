@@ -9,6 +9,7 @@
     "url": "https://www.remem.me/"
   },
   "homepage": "https://www.remem.me/docs/mcp/",
+  "repository": "https://github.com/remem-me/bible-memory",
   "license": "MIT",
   "keywords": [
     "bible",
