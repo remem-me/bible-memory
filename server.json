@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "me.remem/bible-memory",
+  "title": "Remember Me – Bible Memory",
+  "description": "Memorize Bible verses with spaced repetition: add verses, get quizzed, follow a daily reading plan.",
+  "version": "1.0.0",
+  "websiteUrl": "https://www.remem.me/docs/mcp/",
+  "repository": {
+    "url": "https://github.com/remem-me/bible-memory",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://www.remem.me/favicons/android-192x192.png",
+      "mimeType": "image/png",
+      "sizes": ["192x192"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://auth.remem.me/mcp"
+    }
+  ]
+}

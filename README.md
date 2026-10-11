@@ -12,6 +12,7 @@ The connection itself is the MCP server at `https://auth.remem.me/mcp` in [rm_re
 |---|---|
 | [`plugin.json`](plugin.json) | Agent Plugins manifest. The ChatGPT listing is under `extensions.com.openai`: texts, links, icons and the review test cases. |
 | [`mcp.json`](mcp.json) | The remote MCP server. |
+| [`server.json`](server.json) | The entry `me.remem/bible-memory` in the Official MCP Registry. The public server has its own entry, `me.remem/collections`, in rm_replication's `mcp_server/server.json`. |
 | [`assets/`](assets) | Logo (512 px) and composer icon (192 px), both the app icon. |
 | [`store/listing.md`](store/listing.md) | Listing texts, and the answers for each step of Claude's and ChatGPT's portals. |
 | [`store/test-prompts.md`](store/test-prompts.md) | Test prompts in seven languages, with a column per assistant for the results. |
@@ -23,6 +24,7 @@ The connection itself is the MCP server at `https://auth.remem.me/mcp` in [rm_re
 ## Updating the listing
 
 - **Tools** come from the server. Both stores rescan it, so a tool change needs a deploy of rm_replication, not a new ZIP.
+- **Registry entry:** raise `version` in `server.json`, then `mcp-publisher login dns --domain remem.me --private-key <key>` and `mcp-publisher publish`. The key belongs to the `v=MCPv1` TXT record on remem.me; the login lasts five minutes.
 - **Listing texts, icons and test cases** for ChatGPT live in `plugin.json`. Change them there, raise `version`, run `scripts/build-zip.sh` and upload the ZIP. Keep `store/listing.md` in step; Claude's texts are edited in its portal.
 
 Keep passwords out of this repo. They go only into the stores' private fields.
