@@ -65,9 +65,9 @@ After submitting: status and feedback at claude.ai/directory/manage. Escalations
 
 ## ChatGPT: platform.openai.com/plugins
 
-Requirements: a verified developer identity (Poimena, business verification), and the organization owner or a member with **Apps Management Write**.
+Requirements: a verified developer identity (individual verification; see doc#30 decision 3), and the organization owner or a member with **Apps Management Write**.
 
-1. **Upload** `dist/remember-me-1.0.0.zip` (`scripts/build-zip.sh`) and choose Poimena as the developer identity. Fix any metadata findings in plugin.json and upload again. Check that `category` (Education) is one of the dashboard's categories.
+1. **Upload** `dist/remember-me-1.0.0.zip` (`scripts/build-zip.sh`) and choose the verified individual identity. Fix any findings under Issues in plugin.json, rebuild and use **Upload new version**; an unpublished draft keeps version 1.0.0.
 2. **MCPs → Connect.**
    - URL `https://auth.remem.me/mcp`, authentication OAuth. ChatGPT picks CIMD from our metadata, so there is no client to register.
    - Domain verification: copy the token the portal shows, set it as `OPENAI_APPS_CHALLENGE` on the auth.remem.me site, restart the site, and check `https://auth.remem.me/.well-known/openai-apps-challenge`. This needs the rm_replication change from the M2 branch to be deployed.

@@ -22,6 +22,12 @@ limit('displayName', ui['displayName'], 30)
 limit('shortDescription', ui['shortDescription'], 30)
 limit('longDescription', ui['longDescription'], 4000)
 limit('developerName', ui['developerName'], 80)
+# The dashboard's fixed list (developers.openai.com/plugins/deploy/submission-errors)
+categories = ('Productivity', 'Creativity', 'Developer Tools', 'Business & Operations',
+              'Data & Analytics', 'Communication', 'Education & Research', 'Security',
+              'Finance', 'Healthcare', 'Travel', 'Entertainment', 'Other')
+if ui['category'] not in categories:
+    problems.append(f'category "{ui["category"]}" is not one of the dashboard\'s categories')
 if len(ui.get('capabilities', [])) > 20:
     problems.append('more than 20 capabilities')
 for c in ui.get('capabilities', []):
