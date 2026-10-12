@@ -69,7 +69,7 @@ The prompts are what a user would type, so they speak to the assistant informall
 | D3 | Busca en Remember Me una colección sobre la esperanza. | | |
 | I1 | Quiero aprenderme de memoria el Salmo 23. | | |
 | I2 | ¿Me puedes preguntar los versículos que estoy memorizando? | | |
-| I3 | ¿Qué debería leer hoy en la Biblia? | | |
+| I3 | ¿Qué debería leer hoy en la Biblia? | | ✓ 2026-10-12: get_daily_reading (NVIE); the plan's four readings, Psalm 84 in Spanish numbering |
 | I4 | Dame un versículo para hoy que pueda guardar. | | |
 | N1 | ¿Qué significa la palabra griega "ágape" en 1 Corintios 13? | | |
 | N2 | Marca todos mis versículos pendientes como recordados. | | |
