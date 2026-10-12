@@ -83,7 +83,7 @@ The prompts are what a user would type, so they speak to the assistant informall
 | D3 | Procure no Remember Me uma coleção sobre esperança. | | |
 | I1 | Quero decorar o Salmo 23. | | |
 | I2 | Você pode me testar nos versículos que estou memorizando? | | |
-| I3 | O que devo ler na Bíblia hoje? | | |
+| I3 | O que devo ler na Bíblia hoje? | | ✓ 2026-10-12: get_daily_reading (ARA); the plan's four readings, Psalm 84:1–12 in Portuguese numbering |
 | I4 | Me dê um versículo para hoje que eu possa guardar. | | |
 | N1 | O que significa a palavra grega "ágape" em 1 Coríntios 13? | | |
 | N2 | Marque todos os meus versículos pendentes como lembrados. | | |
