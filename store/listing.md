@@ -22,7 +22,7 @@ One listing for both stores, for the personal server `https://auth.remem.me/mcp`
 | Privacy policy | https://www.remem.me/docs/privacy/ | |
 | Terms of service | https://www.remem.me/docs/terms/ | |
 | Support | https://www.remem.me/docs/mcp/ (its last section points to the forum and support@remem.me) · support@remem.me | |
-| Icon | [`../assets/logo.png`](../assets/logo.png), 512 × 512, the app icon | |
+| Icon | [The app icon](../assets/logo.png), 512 × 512 | |
 | Brand colour | #A30131 (dark theme #F05A78) | |
 
 The name keeps "Bible Memory" from the app's own name (Remember Me. Bible Memory Joy) and matches the registry name planned for M3, `me.remem/bible-memory`. Other connectors called "Remember Me" are general AI-memory tools, so the name never goes out without "Bible Memory".
