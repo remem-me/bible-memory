@@ -41,7 +41,7 @@ Step by step: https://www.remem.me/docs/mcp/
 - **"Unknown application" in any other assistant:** the personal server doesn't admit it. It can still use the public server for collections. To add and review verses, the user can switch to Claude, ChatGPT or Grok, or use the Remember Me app on iOS, Android or https://web.remem.me.
 - **"Invalid email or password":** the same email and password as in the app. A forgotten password is reset in the app or on https://web.remem.me.
 - **Asked which account:** a user can have several accounts. Tools take the account *name*, not the email; list_accounts shows the names.
-- **"Too many changes in a short time" or "Daily limit reached":** an assistant can make 30 write calls within five minutes and 300 cards or changes per day; each card of a batch counts. Nothing from the refused call was saved. Wait and continue later.
-- **"Storage full":** the account has reached its storage limit, and deleted verses still count until the waste bin is emptied on https://web.remem.me (otherwise after about 100 days). The existing verses are safe. For more space, the user writes to support@remem.me.
+- **"Too many changes in a short time" or "Daily limit reached":** an assistant can make 30 write calls within five minutes and 300 cards or changes per day; each card of a batch counts. Nothing from the refused call was saved. After the first, continue in a few minutes; after the second, the next day.
+- **"Storage full":** the account has reached its storage limit, and deleted verses still count until the waste bin is emptied on https://web.remem.me; if it isn't, they are removed after about 100 days. The existing verses are safe. For more space, the user writes to support@remem.me.
 
 More help: the forum at https://forum.remem.me/ or support@remem.me.
