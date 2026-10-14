@@ -45,9 +45,9 @@ ChatGPT takes up to three (`defaultPrompt`), Claude wants at least three:
 Requirements: any paid Claude plan; every tool with a `title` and `readOnlyHint` or `destructiveHint` (done in server#169).
 
 1. **Connection.** Universal URL: `https://auth.remem.me/mcp`.
-2. **Tools.** 17 tools sync from the server.
+2. **Tools.** 18 tools sync from the server.
    - Read-only (10): browse_collections, get_collection_detail, get_collection_metrics, get_daily_reading, list_accounts, list_verses, get_verse, search_verses, find_existing_verses, get_review_queue.
-   - Write (7): add_verse, add_verses, create_collection, update_collection, update_verse, delete_verse, delete_collection.
+   - Write (8): add_verse, add_verses, create_collection, update_collection, update_verse, update_verses, delete_verse, delete_collection.
    - If the portal flags a tool, fix it on the server and deploy before submitting.
 3. **Listing.** Name, one-liner and description from above. Categories: choose from the portal's list; Education first, then Lifestyle or Productivity if offered. Documentation, privacy policy, support contact and icon from above. URL slug: `remember-me-bible-memory`. **The slug can't be changed once published.**
 4. **Use cases.**
@@ -67,7 +67,7 @@ After submitting: status and feedback at claude.ai/directory/manage. Escalations
 
 Requirements: a verified developer identity (individual verification; see doc#30 decision 3), and the organization owner or a member with **Apps Management Write**.
 
-1. **Upload** `dist/remember-me-1.0.0.zip` (`scripts/build-zip.sh`) and choose the verified individual identity. Fix any findings under Issues in plugin.json, rebuild and use **Upload new version**; an unpublished draft keeps version 1.0.0.
+1. **Upload** `dist/remember-me-<version>.zip` (`scripts/build-zip.sh`) and choose the verified individual identity. Fix any findings under Issues in plugin.json, rebuild and use **Upload new version**; an unpublished draft keeps its version, a submitted one needs a higher one (1.0.1: the limits count requests, a batch as one).
 2. **MCPs → Connect.**
    - URL `https://auth.remem.me/mcp`, authentication OAuth. ChatGPT picks CIMD from our metadata, so there is no client to register.
    - Domain verification: copy the token the portal shows, set it as `OPENAI_APPS_CHALLENGE` on the auth.remem.me site, restart the site, and check `https://auth.remem.me/.well-known/openai-apps-challenge`. This needs the rm_replication change from the M2 branch to be deployed.
