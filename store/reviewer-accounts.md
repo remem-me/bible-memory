@@ -53,6 +53,6 @@ Paste this into Claude's "Test & launch" step and into ChatGPT's "Review details
 > 4. "Find a collection of Bible verses about peace that I can memorize." searches the public library.
 > 5. "Add the note "Learned for Sunday school" to my verse John 3:16." edits one of the user's verses.
 >
-> **Limits.** An assistant can make at most 30 changes within five minutes and 300 per day; reading is not limited. Deleted verses go to the waste bin at https://web.remem.me, where they can be restored.
+> **Limits.** An assistant can make at most 30 changes within five minutes and add or change 300 cards per day; reading is not limited. Each account also has a storage limit. Deleted verses go to the waste bin at https://web.remem.me, where they can be restored.
 >
 > **Help.** support@remem.me

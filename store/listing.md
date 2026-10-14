@@ -45,9 +45,9 @@ ChatGPT takes up to three (`defaultPrompt`), Claude wants at least three:
 Requirements: any paid Claude plan; every tool with a `title` and `readOnlyHint` or `destructiveHint` (done in server#169).
 
 1. **Connection.** Universal URL: `https://auth.remem.me/mcp`.
-2. **Tools.** 15 tools sync from the server.
-   - Read-only (9): browse_collections, get_collection_detail, get_collection_metrics, get_daily_reading, list_accounts, list_verses, get_verse, search_verses, get_review_queue.
-   - Write (6): add_verse, create_collection, update_collection, update_verse, delete_verse, delete_collection.
+2. **Tools.** 17 tools sync from the server.
+   - Read-only (10): browse_collections, get_collection_detail, get_collection_metrics, get_daily_reading, list_accounts, list_verses, get_verse, search_verses, find_existing_verses, get_review_queue.
+   - Write (7): add_verse, add_verses, create_collection, update_collection, update_verse, delete_verse, delete_collection.
    - If the portal flags a tool, fix it on the server and deploy before submitting.
 3. **Listing.** Name, one-liner and description from above. Categories: choose from the portal's list; Education first, then Lifestyle or Productivity if offered. Documentation, privacy policy, support contact and icon from above. URL slug: `remember-me-bible-memory`. **The slug can't be changed once published.**
 4. **Use cases.**
