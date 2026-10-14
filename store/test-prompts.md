@@ -150,7 +150,7 @@ Claude's portal asks you to confirm that every tool has been run, and the prompt
 | 12 | Delete Psalm 121:1-2 from my verses. | delete_verse |
 | 13 | Do I already have cards for "lamp", "shepherd" or Psalm 121? | find_existing_verses |
 | 14 | Add Psalm 121:1 and Psalm 121:2 as two cards under my label Trust. | add_verses |
-| 15 | Set the source of both cards to WEB and take them out of the label Trust. | update_verses |
+| 15 | Change both cards to the WEB text and take them out of the label Trust. | update_verses |
 | 16 | Delete both cards. | delete_verse |
 | 17 | Publish a test collection "Tool check" with Psalm 121:1-2 under my account `<Store> Review English`, not shown in Discover. | create_collection |
 | 18 | Rename it to "Tool check 2". | update_collection |

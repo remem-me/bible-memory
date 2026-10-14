@@ -67,7 +67,7 @@ After submitting: status and feedback at claude.ai/directory/manage. Escalations
 
 Requirements: a verified developer identity (individual verification; see doc#30 decision 3), and the organization owner or a member with **Apps Management Write**.
 
-1. **Upload** `dist/remember-me-1.0.0.zip` (`scripts/build-zip.sh`) and choose the verified individual identity. Fix any findings under Issues in plugin.json, rebuild and use **Upload new version**; an unpublished draft keeps version 1.0.0.
+1. **Upload** `dist/remember-me-<version>.zip` (`scripts/build-zip.sh`) and choose the verified individual identity. Fix any findings under Issues in plugin.json, rebuild and use **Upload new version**; an unpublished draft keeps its version, a submitted one needs a higher one (1.0.1: the limits count requests, a batch as one).
 2. **MCPs → Connect.**
    - URL `https://auth.remem.me/mcp`, authentication OAuth. ChatGPT picks CIMD from our metadata, so there is no client to register.
    - Domain verification: copy the token the portal shows, set it as `OPENAI_APPS_CHALLENGE` on the auth.remem.me site, restart the site, and check `https://auth.remem.me/.well-known/openai-apps-challenge`. This needs the rm_replication change from the M2 branch to be deployed.
