@@ -1,0 +1,15 @@
+{
+  "name": "remem-me",
+  "description": "Remember Me, the Bible memory app with spaced repetition, for Claude Code.",
+  "owner": {
+    "name": "Poimena",
+    "email": "support@remem.me"
+  },
+  "plugins": [
+    {
+      "name": "bible-memory",
+      "source": "./",
+      "description": "Memorize Bible verses with Remember Me: add a verse, get quizzed on the verses that are due, follow a daily Bible reading plan."
+    }
+  ]
+}

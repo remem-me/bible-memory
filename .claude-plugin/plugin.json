@@ -1,0 +1,28 @@
+{
+  "name": "bible-memory",
+  "displayName": "Remember Me – Bible Memory",
+  "version": "1.0.0",
+  "description": "Memorize Bible verses with Remember Me: add a verse you just read, get quizzed on the verses that are due, follow a daily Bible reading plan and browse published verse collections.",
+  "author": {
+    "name": "Poimena",
+    "email": "support@remem.me",
+    "url": "https://www.remem.me/"
+  },
+  "homepage": "https://www.remem.me/docs/mcp/",
+  "repository": "https://github.com/remem-me/bible-memory",
+  "license": "MIT",
+  "keywords": [
+    "bible",
+    "scripture",
+    "memorize",
+    "bible memory",
+    "spaced repetition",
+    "bible reading plan",
+    "christian"
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://www.remem.me/docs/mcp/",
+  "supportUrl": "https://www.remem.me/docs/mcp/",
+  "privacyPolicyUrl": "https://www.remem.me/docs/privacy/",
+  "termsOfServiceUrl": "https://www.remem.me/docs/terms/"
+}

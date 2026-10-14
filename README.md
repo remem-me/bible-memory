@@ -1,34 +1,44 @@
 # Remember Me – Bible Memory
 
-Memorize Bible verses with your AI assistant. Remember Me – Bible Memory connects Claude, ChatGPT and other assistants to [Remember Me](https://www.remem.me), the Bible memory app with spaced repetition: add a verse you have just read, get quizzed on the verses that are due, and follow a daily Bible reading plan.
+Memorize Bible verses with your AI assistant. Remember Me – Bible Memory connects Claude, ChatGPT and other assistants to [Remember Me](https://www.remem.me), the Bible memory app with spaced repetition: add a verse you have just read, get quizzed on the verses that are due, and follow a daily Bible reading plan. It is available in 48 languages.
 
-**Connect it:** add `https://auth.remem.me/mcp` as a connector in your assistant and sign in with your Remember Me account. Step by step: [Connect an AI Assistant](https://www.remem.me/docs/mcp/). Questions: the [user forum](https://forum.remem.me/) or support@remem.me.
+You need a Remember Me account. You can create one for free from the sign-in page.
 
-## What's in this repository
+## Connect your assistant
 
-The connection itself is the MCP server at `https://auth.remem.me/mcp` in [rm_replication](https://gitlab.com/remem-me/server) (`mcp_server/`). This repository holds the package and the materials the assistants' stores need around it ([doc#30](https://gitlab.com/remem-me/doc/-/work_items/30)).
+Add `https://auth.remem.me/mcp` as a connector in Claude, ChatGPT or Grok and sign in with your Remember Me account. Step by step: [Connect an AI Assistant](https://www.remem.me/docs/mcp/).
 
-| Path | Contents |
-|---|---|
-| [`plugin.json`](plugin.json) | Agent Plugins manifest. The ChatGPT listing is under `extensions.com.openai`: texts, links, icons and the review test cases. |
-| [`mcp.json`](mcp.json) | The remote MCP server. |
-| [`server.json`](server.json) | The entry `me.remem/bible-memory` in the Official MCP Registry. The public server has its own entry, `me.remem/collections`, in rm_replication's `mcp_server/server.json`. |
-| [`assets/`](assets) | Logo (512 px) and composer icon (192 px), both the app icon. |
-| [`store/listing.md`](store/listing.md) | Listing texts, and the answers for each step of Claude's and ChatGPT's portals. |
-| [`store/test-prompts.md`](store/test-prompts.md) | Test prompts in seven languages, with a column per assistant for the results. |
-| [`store/reviewer-accounts.md`](store/reviewer-accounts.md) | How the reviewer accounts are set up, and the instructions for the reviewers. |
-| [`store/reviewer-en.csv`](store/reviewer-en.csv), [`store/reviewer-de.csv`](store/reviewer-de.csv) | The reviewer accounts' verses, to import or restore. |
-| [`store/demo-video.md`](store/demo-video.md) | Shot list for the video ChatGPT's review asks for. |
-| [`scripts/build-zip.sh`](scripts/build-zip.sh) | Checks the portal's limits and builds `dist/remember-me-<version>.zip` for OpenAI. |
+## Install the skill
 
-## Updating the listing
+The `bible-memory` skill teaches your assistant how to use Remember Me: how to add a verse word for word, how to run a review one verse at a time, how to read the day's passages, and which words the app uses.
 
-- **Tools** come from the server. Both stores rescan it, so a tool change needs a deploy of rm_replication, not a new ZIP.
-- **Registry entry:** raise `version` in `server.json`, then `mcp-publisher login dns --domain remem.me --private-key <key>` and `mcp-publisher publish`. The key belongs to the `v=MCPv1` TXT record on remem.me; the login lasts five minutes.
-- **Listing texts, icons and test cases** for ChatGPT live in `plugin.json`. Change them there, raise `version`, run `scripts/build-zip.sh` and upload the ZIP. Keep `store/listing.md` in step; Claude's texts are edited in its portal.
+**Claude Code:** install the plugin, which brings the skill and the connection:
 
-Keep passwords out of this repo. They go only into the stores' private fields.
+```
+/plugin marketplace add remem-me/bible-memory
+/plugin install bible-memory@remem-me
+```
 
-## Later
+Then run `/mcp`, choose `remember-me` and sign in.
 
-M4 in doc#30 adds a `bible-memory` skill under `skills/` and a Claude plugin manifest, so the skill directories (Claude, skills.sh, ClawHub) can install it from this repository.
+**Other agents** (Codex, Cursor, Grok Build, Hermes, OpenClaw and others): install the skill with [skills.sh](https://skills.sh):
+
+```
+npx skills add remem-me/bible-memory
+```
+
+Codex signs in to your account like ChatGPT. Most other agents, such as OpenClaw, Grok Build or Hermes, can't; they can use the public server, `https://mcp.remem.me/mcp`, to browse the published verse collections. [The skill's connection guide](skills/bible-memory/references/connect.md) shows how to connect each of them.
+
+## What it connects to
+
+The plugin connects your assistant to the Remember Me server at `https://auth.remem.me/mcp`. When you ask for something, your assistant sends the details to that server, such as a verse to add, a search term or today's date, and gets back your verses, a collection or the day's reading. The server changes only the verses and collections of the account you signed in with. For the day's reading, your assistant opens the passages on a Bible website in your translation.
+
+How Remember Me handles this data is described in the [privacy policy](https://www.remem.me/docs/privacy/), under *If you connect an AI assistant*. The [terms of use](https://www.remem.me/docs/terms/) apply.
+
+The plugin runs no code of its own. The other files in this repository, such as the listing texts and the build script for the ChatGPT package, are for maintaining the listings and are never run by the plugin.
+
+## Help
+
+Ask in the [user forum](https://forum.remem.me/) or write to support@remem.me.
+
+Remember Me is run by Poimena, a nonprofit organisation in Switzerland. This repository is published under the [MIT License](LICENSE). Maintainers: see [MAINTAINING.md](MAINTAINING.md).
