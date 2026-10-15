@@ -44,7 +44,7 @@ For a chapter, a series or a word list, use the batch tools instead of one call 
 2. Show the user the cards you are about to add, and wait until they agree.
 3. Call add_verses once (up to 100 cards, all under one label). It saves all of them or none; if it refuses, the error says why and how many would fit.
 
-To change many cards at once, such as setting `source` on every card under a label or moving cards to another label, call update_verses once (up to 100 changes) instead of update_verse per card. Each change names a `verse_id` and what to change: fields, `add_tag`, `remove_tag`. It saves all of them or none. Get the ids from list_verses or search_verses. The user's devices show the changes after their next sync, so suggest opening the app before reviewing the changed cards.
+To change many cards at once, such as setting `source` on every card under a label or moving cards to another label, call update_verses once (up to 100 changes) instead of update_verse per card. Each change names a `verse_id` and what to change: fields, `add_tag`, `remove_tag`. It saves all of them or none. Get the ids from search_verses, which filters by label (`tag`), `source` and text in one call (list_accounts lists each account's sources), or from list_verses. The user's devices show the changes after their next sync, so suggest opening the app before reviewing the changed cards.
 
 ## Review the verses
 
@@ -74,7 +74,7 @@ To change many cards at once, such as setting `source` on every card under a lab
 
 ## Find, edit and delete verses
 
-- Find a verse with get_verse (an id or a share link such as `https://web.remem.me/share/<id>`), search_verses (by text) or list_verses (by label).
+- Find a verse with get_verse (an id or a share link such as `https://web.remem.me/share/<id>`), search_verses (by text, label or source) or list_verses (by label).
 - update_verse changes only the fields you pass. To clear a field, pass a single space. `add_tag` files the verse under a label, `remove_tag` takes it out of one; the verse itself stays. The labels of collections the user publishes or subscribes to (marked `subscribed` in list_accounts) are the publisher's: the tools refuse to file cards under them or take cards out of them.
 - delete_verse moves the verse to the app's waste bin, where the user can restore it. Ask before deleting.
 - create_collection, update_collection and delete_collection work on collections the user publishes from a publisher account. `listed: false` keeps a collection out of Discover, but anyone with its link can still open it. Leave `featured` out.
