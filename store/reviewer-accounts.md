@@ -6,14 +6,15 @@ One user access per store (doc#30, decision 4), like the app stores' `apple@`, `
 |---|---|---|
 | Claude | anthropic@remem.me | Anthropic Review English, Anthropic Review Deutsch |
 | ChatGPT | openai@remem.me | OpenAI Review English, OpenAI Review Deutsch |
+| Meta Muse | meta@remem.me | Meta Review English, Meta Review Deutsch |
 
 Verse account names are unique across all of Remember Me, so plain names such as "English" or "Deutsch" are taken; the names above aren't.
 
-Both stores reject an account that needs a second factor, an email code or a new sign-up, so the reviewers sign in with email and password only. Keep the passwords in the password manager and enter them only in the stores' private fields, never in this repo.
+The stores reject an account that needs a second factor, an email code or a new sign-up, so the reviewers sign in with email and password only. Keep the passwords in the password manager and enter them only in the stores' private fields, never in this repo.
 
 ## Set up (once per user access)
 
-Below, `<Store>` is `Anthropic` or `OpenAI`.
+Below, `<Store>` is `Anthropic`, `OpenAI` or `Meta`.
 
 1. **Register** at https://web.remem.me with the address and a strong password. The address must receive mail for the activation link.
 2. **Verse accounts.** The activation creates a first verse account named after the address (`anthropic` or `openai`).
@@ -40,7 +41,7 @@ The Amazon reviewer's collection "Meditate on (ESV)" (436663845892087) was unlis
 
 ## Instructions for the reviewers
 
-Paste this into Claude's "Test & launch" step and into ChatGPT's "Review details", with the store's own account names. The email address and the password go into the credentials fields.
+Paste this into Claude's "Test & launch" step and into ChatGPT's "Review details", with the store's own account names. The email address and the password go into the credentials fields. Meta's portal takes a shorter version in the test user's notes (Integration credentials → Test users).
 
 > **Sign-in.** The connector signs in with OAuth. When the Remember Me sign-in page (auth.remem.me) opens, enter the email address and the password from the credentials field. There is no second factor and no email code.
 >
