@@ -18,13 +18,13 @@ Remember Me's own words in each language of the app, copied from the app. Use th
 | ko | 새로운 | 예정된 | 암기된 | 기억됨 | 잊어버림 | 태그 | 둘러보기 | 구독하기 | 휴지통 |
 | nb | Ny | Forfaller | Kjent | Husk | Glemt | Etiketter | Oppdag | Abonner | Papirkurv |
 | nl | Nieuw | Actueel | Bekend | Herinnerde | Vergeten | Labels | Ontdekken | Abonneren | Afvalbak |
-| pl | Nowy | Należy | Znany | Zapamiętane | Zapomniałem | Etykiety | Odkrywaj | Subskrybuj | Kosz na śmieci |
+| pl | Nowy | Należy | Znany | Zapamiętane | Zapomniane | Etykiety | Odkrywaj | Subskrybuj | Kosz na śmieci |
 | pt | Novo | Pendente | Conhecido | Lembrado | Esquecido | Etiquetas | Descobrir | Inscrever-se | Caixote do lixo |
 | ro | Nou | Datorat | Cunoscut | Reținut | Uitat | Etichete | Descoperă | Abonați-vă | Coș de gunoi |
 | ru | Новые | Должные | Запомненные | Запомнено | Забыто | Метки | Обзор | Подписаться | Корзина |
 | sv | Ny | Förfaller | Känt | Ihågkommet | Glömt | Taggar | Upptäck | Prenumerera | Papperskorg |
 | uk | Новий | Вчити | Знаю | Згадав | Забув | Ярлики | Огляд | Підписатися | сміттєвий кошик |
-| ur | نیا | معلوماتی | حفظ شدہ | یاد آیا | بھول گیا | ٹیگز | دریافت | سبسکرائب کریں | سیل |
+| ur | نیا | دہرائی | حفظ شدہ | یاد آیا | بھول گیا | ٹیگز | دریافت | سبسکرائب کریں | ردی کی ٹوکری |
 | zh-Hans | 新 | 到期 | 已知的 | 记住了 | 被遗忘的 | 标签 | 发现 | 订阅 | 垃圾箱 |
 | zh-Hant | 新 | 到期 | 已知的 | 記住了 | 被遺忘的 | 標籤 | 發現 | 訂閱 | 垃圾箱 |
 
