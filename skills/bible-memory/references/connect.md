@@ -43,5 +43,6 @@ Step by step: https://www.remem.me/docs/mcp/
 - **Asked which account:** a user can have several accounts. Tools take the account *name*, not the email; list_accounts shows the names.
 - **"Too many changes in a short time" or "Daily limit reached":** an assistant can make 30 write calls within five minutes and 300 cards or changes per day; each card of a batch counts. Nothing from the refused call was saved. After the first, continue in a few minutes; after the second, the next day.
 - **"Storage full":** the account has reached its storage limit. Deleting verses or shortening their notes frees space at once. The existing verses are safe. For more space, the user writes to support@remem.me.
+- **"Wastebin full":** the account has deleted so much lately that its deleted items fill five times the storage limit. Deleting more doesn't help; emptying the wastebin in the web app (web.remem.me) does, or waiting about 100 days.
 
 More help: the forum at https://forum.remem.me/ or support@remem.me.
