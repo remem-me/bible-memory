@@ -16,7 +16,7 @@ One listing for both stores, for the personal server `https://auth.remem.me/mcp`
 | Subtitle (ChatGPT) | Memorize Bible verses | 30 |
 | One-liner (Claude) | Memorize Bible verses with spaced repetition: add a verse you just read, get quizzed on the ones that are due, and follow a daily Bible reading plan. | 200 |
 | Description | `longDescription` in plugin.json (1,768 characters) | ChatGPT 4,000, Claude 2,000 |
-| Publisher | Poimena | |
+| Publisher | Claude: Poimena. ChatGPT: Peter Schaffluetzel, the verified individual, as Poimena's representative | |
 | Website | https://www.remem.me/ | |
 | Documentation | https://www.remem.me/docs/mcp/ | |
 | Privacy policy | https://www.remem.me/docs/privacy/ | |
@@ -27,7 +27,7 @@ One listing for both stores, for the personal server `https://auth.remem.me/mcp`
 
 The name keeps "Bible Memory" from the app's own name (Remember Me. Bible Memory Joy) and matches the registry name planned for M3, `me.remem/bible-memory`. Other connectors called "Remember Me" are general AI-memory tools, so the name never goes out without "Bible Memory".
 
-OpenAI checks that the public URLs name the same publisher as the verified identity. The forum doesn't mention Poimena, so the support URL is the AI assistants page, which does.
+OpenAI checks that the public URLs name the same publisher as the verified identity, which is the maintainer as an individual (PETER SCHAFFLUETZEL; Poimena can't be verified as a business, doc#30 decision 3). So `developerName` and `author` in plugin.json carry his name, and the privacy policy, the terms and the AI assistants page name him as Poimena's representative who publishes Remember Me in the assistants' directories (doc!53). Versions 1.0.0 and 1.0.1 named only Poimena and were rejected on 2026-10-27 because OpenAI "could not confirm that the verified individual or business owns this plugin, brand, or trademark". The forum doesn't mention either, so the support URL is the AI assistants page.
 
 The descriptions and the server instructions name no other app and no price (OpenAI forbids both). "Free" appears only where Claude asks what users need before they connect.
 
