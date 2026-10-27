@@ -6,7 +6,7 @@ You need a Remember Me account. You can create one for free from the sign-in pag
 
 ## Connect your assistant
 
-Add `https://auth.remem.me/mcp` as a connector in Claude, ChatGPT or Grok and sign in with your Remember Me account. Step by step: [Connect an AI Assistant](https://www.remem.me/docs/mcp/).
+In Claude, add [Remember Me – Bible Memory](https://claude.ai/directory/connectors/remember-me-bible-memory) from the connector directory. In ChatGPT or Grok, add `https://auth.remem.me/mcp` as a connector. Then sign in with your Remember Me account. Step by step: [Connect an AI Assistant](https://www.remem.me/docs/mcp/).
 
 ## Install the skill
 

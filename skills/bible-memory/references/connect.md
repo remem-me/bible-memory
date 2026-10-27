@@ -13,7 +13,7 @@ Both use the streamable HTTP transport.
 
 Tell the user what to do; you can't add a connector yourself.
 
-- **Claude:** on claude.ai, Settings → Connectors → Add custom connector, address `https://auth.remem.me/mcp`. Once added on the web, it also works in the mobile app and in voice mode.
+- **Claude:** open Remember Me – Bible Memory in Claude's connector directory, https://claude.ai/directory/connectors/remember-me-bible-memory (or Customize → Connectors → +, search for "Remember Me"), and choose Connect. It works on every Claude plan; once added on the web, it also works in the mobile app and in voice mode. Users who added `https://auth.remem.me/mcp` as a custom connector before can remove that one.
 - **ChatGPT:** Settings → Security and login → turn on Developer mode, then Settings → Plugins → +, address `https://auth.remem.me/mcp`. Leave the client ID and secret empty.
 - **Grok:** grok.com/connectors → New Connector → Custom, address `https://auth.remem.me/mcp`.
 - **Claude Code:** install the plugin, which brings the server along:
