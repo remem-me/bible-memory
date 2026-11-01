@@ -31,7 +31,7 @@ If the personal tools (such as add_verse) are missing, or sign-in fails, read [r
 
 1. Find the account. The tools take an account *name*, not the login email. If the user has more than one account, or you are unsure, call list_accounts. It also lists the user's labels, so you can file the verse under one that exists instead of creating a near-duplicate.
 2. Get the exact wording. The user will be quizzed word for word, so `passage` must be the text of one translation and `source` its code, such as KJV, ESV or LUT. If you can't give the exact wording of the translation the user wants, ask them to paste it. Don't paraphrase or mix translations. Leave `source` out when the text isn't exactly one translation's. On cards that aren't Bible verses, such as a word list, `source` is the book or course the text comes from.
-3. Call add_verse. Give a `tag` only when the user named a label or an existing one clearly fits.
+3. Call add_verse. Give a `tag` only when the user named a label or an existing one clearly fits. A `tag` is a label or its id from list_accounts. Labels can repeat: if several lists share one, the tool refuses and lists their ids, so ask the user which list they mean and pass its id.
 4. Confirm briefly: the verse is in the New box. The user learns it there in the app and then moves it into review, and from then on Remember Me schedules it.
 
 A passage of a few verses, such as Philippians 4:6-7, usually goes on one card.
@@ -44,7 +44,7 @@ For a chapter, a series or a word list, use the batch tools instead of one call 
 2. Show the user the cards you are about to add, and wait until they agree.
 3. Call add_verses once (up to 100 cards, all under one label). It saves all of them or none; if it refuses, the error says why and how many would fit.
 
-To change many cards at once, such as setting `source` on every card under a label or moving cards to another label, call update_verses once (up to 100 changes) instead of update_verse per card. Each change names a `verse_id` and what to change: fields, `add_tag`, `remove_tag`. It saves all of them or none. Get the ids from search_verses, which filters by label (`tag`), `source` and text in one call (list_accounts lists each account's sources), or from list_verses. The user's devices show the changes after their next sync, so suggest opening the app before reviewing the changed cards.
+To change many cards at once, such as setting `source` on every card under a label or moving cards to another label, call update_verses once (up to 100 changes) instead of update_verse per card. Each change names a `verse_id` and what to change: fields, `add_tag`, `remove_tag` (a label or its id). It saves all of them or none. Get the ids from search_verses, which filters by label (`tag`), `source` and text in one call (list_accounts lists each account's sources), or from list_verses. The user's devices show the changes after their next sync, so suggest opening the app before reviewing the changed cards.
 
 ## Review the verses
 
@@ -75,7 +75,8 @@ To change many cards at once, such as setting `source` on every card under a lab
 ## Find, edit and delete verses
 
 - Find a verse with get_verse (an id or a share link such as `https://web.remem.me/share/<id>`), search_verses (by text, label or source) or list_verses (by label).
-- update_verse changes only the fields you pass. To clear a field, pass a single space. `add_tag` files the verse under a label, `remove_tag` takes it out of one; the verse itself stays. The labels of collections the user publishes or subscribes to (marked `subscribed` in list_accounts) are the publisher's: the tools refuse to file cards under them or take cards out of them.
+- update_verse changes only the fields you pass. To clear a field, pass a single space. `add_tag` files the verse under a label, `remove_tag` takes it out of one; the verse itself stays.
+- A collection the user publishes counts as one of their labels. Filing a card under it (add_verse or add_verses with the collection's id as `tag`, or `add_tag`) adds the card to the collection, and `remove_tag` takes it out. Its subscribers are offered the change, so confirm with the user before you change a published collection. A collection the user subscribes to (marked `subscribed` in list_accounts) belongs to its publisher: the tools refuse to file cards under it or take cards out of it.
 - delete_verse moves the verse to the app's waste bin, where the user can restore it. Ask before deleting.
 - create_collection, update_collection and delete_collection work on collections the user publishes from a publisher account. `listed: false` keeps a collection out of Discover, but anyone with its link can still open it. Leave `featured` out.
 
