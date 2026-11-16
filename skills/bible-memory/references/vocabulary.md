@@ -20,7 +20,7 @@ Remember Me's own words in each language of the app, copied from the app. Use th
 | nl | Nieuw | Actueel | Bekend | Herinnerde | Vergeten | Labels | Ontdekken | Abonneren | Afvalbak |
 | pl | Nowy | Należy | Znany | Zapamiętane | Zapomniane | Etykiety | Odkrywaj | Subskrybuj | Kosz na śmieci |
 | pt | Novo | Pendente | Conhecido | Lembrado | Esquecido | Etiquetas | Descobrir | Inscrever-se | Caixote do lixo |
-| ro | Nou | Datorat | Cunoscut | Reținut | Uitat | Etichete | Descoperă | Abonați-vă | Coș de gunoi |
+| ro | Nou | De repetat | Cunoscut | Reținut | Uitat | Etichete | Descoperă | Abonați-vă | Coș de gunoi |
 | ru | Новые | Должные | Запомненные | Запомнено | Забыто | Метки | Обзор | Подписаться | Корзина |
 | sv | Ny | Förfaller | Känt | Ihågkommet | Glömt | Taggar | Upptäck | Prenumerera | Papperskorg |
 | uk | Новий | Вчити | Знаю | Згадав | Забув | Ярлики | Огляд | Підписатися | сміттєвий кошик |
